@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="План живого мастер-класса: от простого объяснения домена и ИИ-инструментов до личного сайта по HTTPS.">
+  <meta name="theme-color" content="#f5f2e9">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Ведём мастер-класс — Сайт Виктора</title>
+  <link rel="canonical" href="https://victorlapukhov.com.ru/masterclass/live/">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./content.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a href="#stage" class="skip">К текущему этапу</a>
+  <div class="draft-notice" id="draft-notice" hidden>Предпросмотр для согласования · страница ещё не опубликована</div>
+  <header class="topbar">
+    <a class="brand" href="/">V<span>Сайт Виктора</span></a>
+    <span class="top-caption">Мастер-класс · из идеи в сайт</span>
+    <a href="/masterclass/">Подготовка к встрече ↗</a>
+  </header>
+  <div class="session-bar">
+    <div class="session-title"><span class="eyebrow">Живой показ на GPT‑6 · ChatGPT Work</span><strong>Личный сайт с ИИ</strong></div>
+    <div class="clock"><span id="clock-label">Время встречи</span><output id="total-clock">00:00</output><span>/ 60 мин</span></div>
+    <div class="session-actions"><button id="clock-toggle" class="primary">Начать встречу</button><button id="present-toggle" aria-pressed="false">Режим показа</button><button id="agenda-open">Весь план</button><button id="reset-session" aria-label="Сбросить таймер и прохождение">Сброс</button></div>
+  </div>
+  <div class="workspace">
+    <aside class="rail" aria-label="План мастер-класса">
+      <div class="rail-heading"><strong>Маршрут встречи</strong><span id="progress-label">0 из 13</span></div>
+      <progress id="progress" max="13" value="0" aria-label="Выполнено этапов"></progress>
+      <nav id="timeline" aria-label="Выбрать этап"></nav>
+      <p class="rail-note">45 минут показа + 15 минут вопросов.<br>Форма — дополнительные 20 минут.</p>
+      <button id="questions-open" class="plain">Вопросы на потом <span id="question-count"></span></button>
+      <button id="help-open" class="plain">Если что-то пошло не так ↗</button>
+      <p class="storage-note">Отметки и заметки сохраняются только в этом браузере.</p>
+    </aside>
+    <main id="stage" class="stage" tabindex="-1">
+      <div class="stage-meta"><span id="stage-kind" class="tag"></span><span id="stage-slot"></span><span class="stage-clock">На этапе <output id="step-clock">00:00</output><span id="step-budget"></span></span></div>
+      <h1 id="stage-title"></h1>
+      <p class="stage-lead" id="stage-lead"></p>
+      <div id="stage-visual"></div>
+      <div id="stage-body"></div>
+      <details id="prompt-panel" class="prompt-panel"><summary>Готовый промпт для ChatGPT</summary><div class="prompt-tools"><span>Скопируйте и отправьте в рабочий чат</span><button id="copy-prompt">Скопировать промпт</button></div><pre id="stage-prompt"></pre></details>
+      <details id="speaker-panel" class="speaker-panel"><summary>Подсказки ведущему</summary><div id="stage-notes"></div></details>
+      <div id="stage-sources" class="stage-sources"></div>
+      <div class="stage-end"><div class="navigation"><button id="prev-step" aria-label="Предыдущий этап">← Назад</button><button id="next-step" class="primary">Дальше →</button></div></div>
+      <p class="completion-hint" id="completion-hint" aria-live="polite"></p>
+    </main>
+  </div>
+  <footer><span>Материалы мастер-класса · Виктор</span><span>Документация и размещение проверены 24 сентября 2026</span></footer>
+  <dialog id="agenda-dialog" aria-labelledby="agenda-title"><div class="dialog-head"><h2 id="agenda-title">60 минут: полный план</h2><button data-close aria-label="Закрыть план">Закрыть ×</button></div><p>Время отсчитывается от начала встречи. Показ — 45 минут, вопросы — отдельные 15 минут. Ожидание генерации используем для объяснений.</p><div id="agenda-list"></div><p class="callout">Если отстаём: сокращаем обсуждение дизайна и переносим форму. Проверку безопасности и итоговые вопросы сохраняем.</p></dialog>
+  <dialog id="questions-dialog" aria-labelledby="questions-title"><div class="dialog-head"><h2 id="questions-title">Вопросы на потом</h2><button data-close aria-label="Закрыть вопросы">Закрыть ×</button></div><p>Чтобы не потерять темп, записываем сюда и возвращаемся в блоках вопросов. Не записывайте пароли, токены и личные данные участников.</p><label for="question-notes">Один вопрос на строку</label><textarea id="question-notes" rows="10" placeholder="Например: можно ли перенести уже существующий домен?"></textarea><p class="note">Заметки останутся в этом браузере. На сайт и другим участникам они не отправляются.</p></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-head"><h2 id="help-title">Если что-то пошло не так</h2><button data-close aria-label="Закрыть подсказки">Закрыть ×</button></div><p class="big-quote">«Разберись сам, объясни просто, покажи проверенный результат».</p><ol class="compact-list"><li><strong>Назвать симптом:</strong> что хотели получить и что произошло.</li><li><strong>Попросить диагностику:</strong> проверить доступ, состояние, ошибки и документацию.</li><li><strong>Подумать об альтернативе:</strong> можно ли получить тот же результат другим инструментом или способом?</li><li><strong>Дать выполнить исправление:</strong> в уже согласованных границах, с сохранением рабочей версии.</li><li><strong>Потребовать проверку:</strong> открыть результат и показать, что теперь работает.</li></ol><pre id="trouble-prompt"></pre><button id="copy-trouble" class="primary">Скопировать запрос на исправление</button><p class="callout">Не застреваем на одном месте дольше 3 минут: показываем локальное превью, сохраняем ошибку и идём дальше. Рабочую версию не удаляем. Вход, код подтверждения, личные данные и новые расходы — решение человека.</p></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="no-js">Для таймера и переключения этапов нужен JavaScript. Полный текст доступен в <a href="./plan.html">версии для чтения и печати</a>.</div></noscript>
+</body>
+</html>

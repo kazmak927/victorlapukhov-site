@@ -1,5 +1,5 @@
 window.workshopContent = {
-  "version": 1,
+  "version": 2,
   "totalMinutes": 60,
   "demoMinutes": 45,
   "questionMinutes": 15,
@@ -24,7 +24,7 @@ window.workshopContent = {
       "id": "home",
       "title": "У сайта есть адрес и свой дом",
       "short": "Домен, хостинг, DNS",
-      "minutes": 5,
+      "minutes": 4,
       "kind": "База",
       "lead": "Покупка домена даёт имя. Чтобы по нему что-то открылось, нужны файлы и место для них.",
       "body": "<div class=\"two-col\"><div><span class=\"micro-label\">Что объясняем</span><p><strong>Домен</strong> — удобный адрес вместо длинного номера компьютера. За владение именем платят и вовремя продлевают его.</p><p><strong>Хостинг</strong> — место, где сайт хранится и работает. У нас это Timeweb App Platform: обслуживание площадки берёт на себя сервис.</p></div><div><span class=\"micro-label\">Что показываем</span><p>Вводим адрес нашего сайта в браузер. Показываем те же файлы в папке и приложение в Timeweb.</p><p><strong>DNS</strong> связывает имя с местом размещения. Менять его после каждой правки текста не нужно.</p></div></div><p class=\"callout\"><strong>HTTPS — защищённая дорога к дому.</strong> Шифрует передачу и помогает проверить адрес сайта. Это не проверка честности владельца и не защита формы от всех ботов.</p><p class=\"note\">В DNS есть и указатели для почты. Существующие MX и SPF сохраняем, иначе можно сломать доставку писем.</p><p class=\"ready-line\"><strong>Готово, когда:</strong> участники могут объяснить разницу между адресом и местом хранения.</p>",
@@ -39,13 +39,13 @@ window.workshopContent = {
       "visual": "<figure class=\"diagram\" aria-label=\"Домен — адрес, DNS — справочник, хостинг — дом с содержимым сайта\">\n<div class=\"diagram-grid\">\n<div class=\"diagram-card\"><svg viewBox=\"0 0 200 140\" role=\"img\" aria-label=\"Табличка с адресом дома\"><path d=\"M99 59v71M58 130h82\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"6\" stroke-linecap=\"round\"/><rect x=\"15\" y=\"14\" width=\"170\" height=\"59\" rx=\"9\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"100\" y=\"39\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"12\" fill=\"currentColor\">УЛИЦА ВИКТОРА</text><text x=\"100\" y=\"61\" text-anchor=\"middle\" font-family=\"Georgia\" font-size=\"24\" fill=\"currentColor\">№ 1</text></svg><strong>Домен — адрес</strong><small>Имя, которое вводят в браузере.<br>Например, victorlapukhov.com.ru</small></div>\n<div class=\"diagram-arrow\" aria-hidden=\"true\">→</div>\n<div class=\"diagram-card\"><svg viewBox=\"0 0 200 140\" role=\"img\" aria-label=\"Справочник связывает адрес с нужным домом\"><path d=\"M24 24Q64 10 100 26Q136 10 176 24V119Q136 105 100 122Q64 105 24 119Z\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M100 27v92M40 43h40M40 59h33M40 75h39M120 43h39M120 59h33\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M121 89h37m-9-9 10 9-10 9\" fill=\"none\" stroke=\"#c57649\" stroke-width=\"4\"/></svg><strong>DNS — справочник</strong><small>Подсказывает браузеру,<br>где находится сайт по этому имени.</small></div>\n<div class=\"diagram-arrow\" aria-hidden=\"true\">→</div>\n<div class=\"diagram-card\"><svg viewBox=\"0 0 200 140\" role=\"img\" aria-label=\"Дом хранит страницы, фотографии и оформление\"><path d=\"M27 60 100 9l73 51\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"6\" stroke-linejoin=\"round\"/><path d=\"M39 54v77h122V54L100 13Z\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><rect x=\"56\" y=\"68\" width=\"30\" height=\"26\" rx=\"2\" fill=\"#d9e5cc\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M108 131V76h34v55\" fill=\"#c57649\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M26 132h148\" stroke=\"currentColor\" stroke-width=\"3\"/></svg><strong>Хостинг — дом</strong><small>Место для страниц, фото и файлов.<br>Они доступны, даже если ноутбук выключен.</small></div>\n</div><figcaption>Имя сайта не хранит сам сайт. Один адрес можно направить на другой хостинг.</figcaption></figure>",
       "bonus": false,
       "start": 2,
-      "end": 7
+      "end": 6
     },
     {
       "id": "work",
       "title": "Помощник, которому дали инструменты",
       "short": "Work, плагины и MCP",
-      "minutes": 5,
+      "minutes": 4,
       "kind": "База",
       "lead": "В ChatGPT режим называется Work. В новом чате переключатель находится вверху; для папки на рабочем столе выбираем Work locally.",
       "body": "<div class=\"definition-grid\"><div><h3>Плагин — набор возможностей</h3><p>Как коробка с инструментами и инструкциями: устанавливаем нужный набор, чтобы помощник умел больше.</p></div><div><h3>Коннектор — подключение к сервису</h3><p>Например, к хранилищу документов. После входа помощник видит только то, на что получил разрешение.</p></div><div><h3>MCP — общий язык для инструментов</h3><p>По нему помощник обращается к сервису. MCP-сервер Timeweb — собеседник на стороне облака, который предлагает команды вроде «покажи домены».</p></div><div><h3>Computer Use — работа через экран</h3><p>Помощник видит окно и нажимает кнопки, как человек. Пригодится там, где готовой команды нет.</p></div></div><p class=\"callout\">Эти слова описывают разные вещи. Плагин может включать подключение к MCP-серверу. Наличие плагина не выдаёт автоматически доступ ко всем аккаунтам.</p><p class=\"ready-line\"><strong>Готово, когда:</strong> в новом чате включены Work, локальная работа и GPT‑6 Astra.</p>",
@@ -71,14 +71,51 @@ window.workshopContent = {
       ],
       "visual": "<figure class=\"diagram\" aria-label=\"Человек поручает задачу ChatGPT Work, помощник использует подключённые инструменты\">\n<div class=\"agent-flow\"><div class=\"agent-box\"><svg viewBox=\"0 0 130 100\" role=\"img\" aria-label=\"Человек задаёт результат\"><circle cx=\"65\" cy=\"30\" r=\"19\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M25 94V77q0-25 40-25t40 25v17\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"m43 75 18 10 24-18\" stroke=\"#c57649\" stroke-width=\"4\" fill=\"none\"/></svg><strong>Вы</strong><small>«Сделай мне сайт»<br>Решаете, что подходит.</small></div><div class=\"diagram-arrow\" aria-hidden=\"true\">→</div><div class=\"agent-box\"><svg viewBox=\"0 0 130 100\" role=\"img\" aria-label=\"Рабочее место помощника\"><rect x=\"11\" y=\"13\" width=\"108\" height=\"65\" rx=\"7\" fill=\"#fffdf7\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M42 94h46M65 79v14\" stroke=\"currentColor\" stroke-width=\"3\"/><path d=\"M27 33h46M27 46h76M27 59h54\" stroke=\"#82947c\" stroke-width=\"4\"/><circle cx=\"101\" cy=\"30\" r=\"5\" fill=\"#c57649\"/></svg><strong>ChatGPT Work</strong><small>Планирует → делает → проверяет.<br>GPT‑6 — выбранная модель.</small></div><div class=\"diagram-arrow\" aria-hidden=\"true\">→</div><div class=\"tools-stack\"><div class=\"tool-cell\"><strong>Timeweb через MCP</strong><span>Запросить домены, проверить приложение</span></div><div class=\"tool-cell\"><strong>Computer Use</strong><span>Открыть панель, нажать кнопку</span></div><div class=\"tool-cell\"><strong>Рабочая папка</strong><span>Прочитать материалы, создать файлы</span></div></div></div><figcaption>Доступ даём к нужному месту. Установленный инструмент ещё не означает вход в ваш аккаунт.</figcaption></figure>",
       "bonus": false,
-      "start": 7,
-      "end": 12
+      "start": 6,
+      "end": 10
+    },
+    {
+      "id": "github",
+      "title": "GitHub: зачем он нужен и как дать доступ",
+      "short": "GitHub: вход и доступ",
+      "minutes": 4,
+      "kind": "База + действие",
+      "lead": "Между готовыми файлами на компьютере и работающим сайтом нужна передача. В нашем сценарии она идёт через GitHub.",
+      "body": "<div class=\"checkpoint-grid\"><div class=\"checkpoint\"><strong>Git — история версий</strong><p>Как «сохранить новую версию» у документа: видно, что изменилось, и можно вернуться к прежнему варианту.</p></div><div class=\"checkpoint\"><strong>GitHub — папка в интернете</strong><p>Хранит файлы проекта и их историю. Такая папка называется репозиторием. Коммит — сохранённая версия с короткой подписью.</p></div><div class=\"checkpoint\"><strong>Timeweb — работающий дом</strong><p>Забирает выбранную версию из этой папки и показывает сайт посетителям по нашему домену.</p></div></div>\n<figure class=\"diagram\" aria-label=\"Папка на компьютере — GitHub с историей версий — Timeweb — сайт по HTTPS\"><div class=\"route-strip\"><div><small>01 · Готовим</small><strong>Папка на компьютере</strong>ИИ создаёт HTML, стили и фото</div><div><small>02 · Сохраняем →</small><strong>GitHub</strong>Файлы + история версий Git</div><div><small>03 · Забираем →</small><strong>Timeweb</strong>Публикует выбранную версию</div><div><small>04 · Открываем →</small><strong>Домен + HTTPS</strong>Посетитель видит сайт</div></div><figcaption>В аналогии с домом GitHub — архив согласованных чертежей, Git — история их правок. Сам готовый дом для посетителей — хостинг.</figcaption></figure>\n<p><strong>Зачем это нам:</strong> Timeweb App Platform получает готовые файлы из Git-репозитория. После правки в чате агент сохраняет новую версию туда и запускает обновление. Для обычного HTML отдельная сборка не нужна. GitHub выбран для нашего показа; сам HTML может работать и на другом хостинге, а Timeweb поддерживает и другие Git-сервисы.</p>\n<h3>Вход и подключение: один раз до публикации</h3><ol class=\"compact-list\"><li><strong>Войдите на <a href=\"https://github.com/\">github.com</a>.</strong> Если аккаунта нет, зарегистрируйте его заранее. Пароль и код подтверждения вводите сами на сайте GitHub, не в чате. Платный тариф GitHub для нашего публичного учебного репозитория не требуется.</li><li><strong>Попросите ChatGPT подключить GitHub — промпт ниже.</strong> Агент проверит уже доступные инструменты и предложит нужное подключение. Если требуется ваше действие: в приложении ChatGPT откройте <strong>«Плагины» → найдите GitHub → откройте карточку → «Установить» (+)</strong>, затем пройдите подключение аккаунта. Выберите доступ только к нужному репозиторию, если такой выбор предложен. После установки откройте новый чат в режиме Work; GitHub можно выбрать через <strong>@GitHub</strong>.</li><li><strong>Проверьте возможность записи.</strong> Видеть файлы недостаточно: агенту нужен работающий способ сохранить изменения. Попросите назвать аккаунт, репозиторий, доступные действия и выполнить согласованную пробную запись в отдельной ветке без публикации сайта.</li><li><strong>Если плагин недоступен или записи через него нет:</strong> агент проверяет другой разрешённый способ — например, GitHub в авторизованном браузере через Computer Use. Вход в браузере и подключение плагина — разные доступы. На этом сайте загрузка файлов через Safari уже проверена.</li><li><strong>Отдельно подключаем репозиторий к Timeweb.</strong> Агенту нужен доступ <em>записывать</em> файлы в GitHub, а Timeweb — <em>читать</em> их. При публикации выбираем репозиторий, ветку и папку сайта. Наш публичный репозиторий подключён по ссылке; автопубликация выключена.</li></ol>\n<p class=\"callout\">Плагин GitHub помогает работать с репозиторием, но его установка сама по себе не доказывает право записи. MCP Timeweb тоже не даёт доступ к GitHub. Просим показать реальный результат проверки.</p>\n<p class=\"note\">Git и GitHub Desktop вручную заранее ставить не нужно: для проверенного браузерного пути они не требуются. Если выбранный плагин использует локальные инструменты, агент проверит, что необходимо именно ему. В публичный репозиторий отправляем только согласованные файлы сайта — без паролей, исходной биографии и личных заметок.</p><div class=\"checklist\"><label><input type=\"checkbox\" data-check=\"0\"><span>Вход в GitHub выполнен; известны аккаунт и репозиторий сайта.</span></label><label><input type=\"checkbox\" data-check=\"1\"><span>Плагин подключён либо проверен альтернативный доступ через браузер.</span></label><label><input type=\"checkbox\" data-check=\"2\"><span>Согласованная пробная запись прочитана обратно; её ветка не публикуется автоматически.</span></label><label><input type=\"checkbox\" data-check=\"3\"><span>Timeweb может прочитать выбранный репозиторий; способ запуска обновления понятен.</span></label></div><p class=\"ready-line\"><strong>Готово, когда:</strong> агент может сохранить файлы, Timeweb — получить их, участники понимают роль каждого сервиса.</p>",
+      "prompt": "Помоги подключить GitHub для публикации моего HTML-сайта в Timeweb App Platform. Объясни простыми словами, зачем нужны Git, GitHub и репозиторий. Сначала проверь уже доступные подключения и авторизацию, ничего не переустанавливай без необходимости.\n\nЕсли нужен плагин GitHub, найди его в официальном каталоге ChatGPT и помоги подключить. Все доступные шаги выполни сам; мой вход в GitHub, код подтверждения и разрешения попроси только там, где без меня нельзя. Пароли и токены в чат не запрашивай. Если аккаунта ещё нет, помоги открыть регистрацию и ясно объясни, какие действия должен выполнить я.\n\nПокажи, от имени какого аккаунта работаешь, какой репозиторий сайта выбран и умеет ли доступный инструмент записывать файлы. Чтение не выдавай за возможность записи. Если репозитория ещё нет, сначала согласуй его имя и публичность. До проверки записи убедись, что отдельная тестовая ветка не запускает деплой или другие нежелательные действия. Покажи имя ветки и короткий безличный тестовый файл; после моего подтверждения запиши его, прочитай обратно и покажи результат. Рабочую ветку, сайт и DNS не меняй.\n\nЕсли через плагин записать нельзя, сам проверь альтернативный разрешённый путь: авторизованный Git-доступ или GitHub в браузере через Computer Use. Не обходи запреты доступа. Отдельно проверь, сможет ли Timeweb прочитать репозиторий. Заверши коротко: вход проверен / запись проверена или пока нет / чтение Timeweb проверено или пока нет / чего не хватает. Пока не публикуй сайт и не создавай платные услуги.",
+      "notes": "<p>4 минуты: 1 — схема и определения; 1 — показать вход и карточку плагина; 2 — показать заранее проверенный репозиторий, сохранённую версию и способ записи. Регистрацию, двухфакторный вход и настройку доступа делаем до встречи; показывать их с нуля за четыре минуты не обещаем.</p><p>Установка плагина и вход в аккаунт — отдельные действия. Проверка записи должна быть реальной: успешная загрузка и обратное чтение, а не только список файлов. Для текущего сайта используем уже работающий репозиторий, новый не создаём. Не включаем автодеплой ради проверки и не публикуем тестовую ветку.</p><p>Каталог плагинов проверен 28 сентября: GitHub доступен и описывает работу через коннектор и локальные инструменты. Конкретные возможности записи проверяются в окружении участника. 24 сентября пять файлов этой страницы успешно загружены через Safari и опубликованы через MCP Timeweb.</p>",
+      "sources": [
+        [
+          "Git и GitHub простыми словами",
+          "https://docs.github.com/en/get-started/start-your-journey/what-is-github"
+        ],
+        [
+          "Подключение плагинов ChatGPT",
+          "https://learn.chatgpt.com/docs/plugins"
+        ],
+        [
+          "GitHub Free",
+          "https://docs.github.com/en/get-started/learning-about-github/githubs-plans"
+        ],
+        [
+          "Как Timeweb получает файлы",
+          "https://timeweb.cloud/docs/apps/how-it-works"
+        ],
+        [
+          "Готовые HTML/CSS/JS",
+          "https://timeweb.cloud/docs/apps/deploying-frontend-apps/static-website"
+        ]
+      ],
+      "visual": "",
+      "bonus": false,
+      "start": 10,
+      "end": 14
     },
     {
       "id": "connect",
       "title": "Подключаем Timeweb и управление экраном",
       "short": "Подключаем инструменты",
-      "minutes": 5,
+      "minutes": 4,
       "kind": "Делаем",
       "lead": "Сначала просим проверить уже доступное. Если всё работает, повторная установка не нужна.",
       "body": "<div class=\"two-col\"><div><span class=\"micro-label\">Что объясняем</span><p>Для Timeweb даём помощнику доступ через MCP. Для панели и GitHub проверяем Computer Use.</p><p>Пароль и API-токен вводим в защищённое поле авторизации. На экран трансляции и в переписку их не выводим.</p></div><div><span class=\"micro-label\">Что показываем</span><ol class=\"compact-list\"><li>Чтение списка доменов через MCP.</li><li>Открытие example.com и переход по Learn more.</li><li>Проверка входа в GitHub и Timeweb.</li></ol></div></div><details class=\"speaker-panel\"><summary>Если MCP ещё не подключён</summary><p>В настольном ChatGPT: Настройки → Серверы MCP → Добавить сервер. Тип Streamable HTTP, адрес <code>https://timeweb.cloud/api/v1/mcp</code>. Авторизация — заголовок Authorization со значением Bearer и вашим токеном. Ввести самостоятельно, сохранить и перезапустить подключение.</p><p>Если Computer Use отсутствует: попросить агента помочь с установкой из официального каталога; при необходимости открыть «Плагины» → Computer Use. На Mac подтвердить системные разрешения. Установку расширения Chrome отдельным шагом не требуем — проверяем фактически доступный способ управления.</p></details><p class=\"ready-line\"><strong>Готово, когда:</strong> получен реальный список доменов и выполнен переход в браузере.</p>",
@@ -100,8 +137,8 @@ window.workshopContent = {
       ],
       "visual": "",
       "bonus": false,
-      "start": 12,
-      "end": 17
+      "start": 14,
+      "end": 18
     },
     {
       "id": "inventory",
@@ -121,8 +158,8 @@ window.workshopContent = {
       ],
       "visual": "",
       "bonus": false,
-      "start": 17,
-      "end": 20
+      "start": 18,
+      "end": 21
     },
     {
       "id": "folder",
@@ -137,14 +174,14 @@ window.workshopContent = {
       "sources": [],
       "visual": "",
       "bonus": false,
-      "start": 20,
-      "end": 22
+      "start": 21,
+      "end": 23
     },
     {
       "id": "create",
       "title": "Просим результат и смотрим первое превью",
       "short": "Создаём сайт-визитку",
-      "minutes": 7,
+      "minutes": 6,
       "kind": "Делаем",
       "lead": "Фотография, короткий рассказ о человеке, чем он полезен и как с ним связаться.",
       "body": "<div class=\"route-strip\"><div><small>01 · Материалы</small><strong>Фото + факты</strong>Без выдуманной биографии</div><div><small>02 · Страница</small><strong>Структура</strong>Понятный первый экран</div><div><small>03 · Превью</small><strong>В браузере</strong>Компьютер и телефон</div><div><small>04 · Обсуждение</small><strong>Одна правка</strong>Меняем конкретную вещь</div></div><p class=\"big-quote\">«Сделай современный сайт» — начало. «Посетитель за 10 секунд понимает, чем я полезен» — уже критерий.</p><div class=\"checklist\"><label><input type=\"checkbox\" data-check=\"0\"><span>Первый экран объясняет, кто Виктор и чем занимается.</span></label><label><input type=\"checkbox\" data-check=\"1\"><span>Все факты и контакты взяты из согласованных материалов.</span></label><label><input type=\"checkbox\" data-check=\"2\"><span>Текст читается на узком экране, фото и ссылки работают.</span></label></div><p class=\"ready-line\"><strong>Готово, когда:</strong> локальное превью открыто и показано на широком и узком экране.</p>",
@@ -158,7 +195,7 @@ window.workshopContent = {
       ],
       "visual": "",
       "bonus": false,
-      "start": 22,
+      "start": 23,
       "end": 29
     },
     {

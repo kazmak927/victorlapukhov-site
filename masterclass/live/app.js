@@ -11,7 +11,10 @@
   try {
     const saved = JSON.parse(localStorage.getItem(key) || 'null');
     if (saved && typeof saved === 'object') {
-      if (Number.isInteger(saved.index) && saved.index >= 0 && saved.index < steps.length) state.index = saved.index;
+      const legacyIds = ['start','home','work','connect','inventory','folder','create','background','photo','release','publish','verify','questions','form'];
+      const savedId = typeof saved.currentStepId === 'string' ? saved.currentStepId : legacyIds[saved.index];
+      const restoredIndex = steps.findIndex(step => step.id === savedId);
+      if (restoredIndex >= 0) state.index = restoredIndex;
       state.done = Array.isArray(saved.done) ? saved.done.filter(id => steps.some(s => s.id === id)) : [];
       state.questions = typeof saved.questions === 'string' ? saved.questions.slice(0,12000) : '';
       if (saved.checks && typeof saved.checks === 'object') {
@@ -33,7 +36,7 @@
     toastTimeout = setTimeout(() => $('toast').classList.remove('visible'), 3000);
   }
   function save() {
-    try { localStorage.setItem(key, JSON.stringify(state)); }
+    try { localStorage.setItem(key, JSON.stringify({...state,currentStepId:steps[state.index].id})); }
     catch (_) { storageOK = false; $('completion-hint').textContent = 'Браузер не разрешил сохранение: отметки действуют до закрытия страницы.'; }
   }
   function mmss(ms) {

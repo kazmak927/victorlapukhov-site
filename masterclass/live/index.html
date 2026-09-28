@@ -28,8 +28,8 @@
   </div>
   <div class="workspace">
     <aside class="rail" aria-label="План мастер-класса">
-      <div class="rail-heading"><strong>Маршрут встречи</strong><span id="progress-label">0 из 13</span></div>
-      <progress id="progress" max="13" value="0" aria-label="Выполнено этапов"></progress>
+      <div class="rail-heading"><strong>Маршрут встречи</strong><span id="progress-label">0 из 14</span></div>
+      <progress id="progress" max="14" value="0" aria-label="Выполнено этапов"></progress>
       <nav id="timeline" aria-label="Выбрать этап"></nav>
       <p class="rail-note">45 минут показа + 15 минут вопросов.<br>Форма — дополнительные 20 минут.</p>
       <button id="questions-open" class="plain">Вопросы на потом <span id="question-count"></span></button>
@@ -49,7 +49,7 @@
       <p class="completion-hint" id="completion-hint" aria-live="polite"></p>
     </main>
   </div>
-  <footer><span>Материалы мастер-класса · Виктор</span><span>Документация и размещение проверены 24 сентября 2026</span></footer>
+  <footer><span>Материалы мастер-класса · Виктор</span><span>Размещение проверено 24 сентября · GitHub добавлен 28 сентября 2026</span></footer>
   <dialog id="agenda-dialog" aria-labelledby="agenda-title"><div class="dialog-head"><h2 id="agenda-title">60 минут: полный план</h2><button data-close aria-label="Закрыть план">Закрыть ×</button></div><p>Время отсчитывается от начала встречи. Показ — 45 минут, вопросы — отдельные 15 минут. Ожидание генерации используем для объяснений.</p><div id="agenda-list"></div><p class="callout">Если отстаём: сокращаем обсуждение дизайна и переносим форму. Проверку безопасности и итоговые вопросы сохраняем.</p></dialog>
   <dialog id="questions-dialog" aria-labelledby="questions-title"><div class="dialog-head"><h2 id="questions-title">Вопросы на потом</h2><button data-close aria-label="Закрыть вопросы">Закрыть ×</button></div><p>Чтобы не потерять темп, записываем сюда и возвращаемся в блоках вопросов. Не записывайте пароли, токены и личные данные участников.</p><label for="question-notes">Один вопрос на строку</label><textarea id="question-notes" rows="10" placeholder="Например: можно ли перенести уже существующий домен?"></textarea><p class="note">Заметки останутся в этом браузере. На сайт и другим участникам они не отправляются.</p></dialog>
   <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-head"><h2 id="help-title">Если что-то пошло не так</h2><button data-close aria-label="Закрыть подсказки">Закрыть ×</button></div><p class="big-quote">«Разберись сам, объясни просто, покажи проверенный результат».</p><ol class="compact-list"><li><strong>Назвать симптом:</strong> что хотели получить и что произошло.</li><li><strong>Попросить диагностику:</strong> проверить доступ, состояние, ошибки и документацию.</li><li><strong>Подумать об альтернативе:</strong> можно ли получить тот же результат другим инструментом или способом?</li><li><strong>Дать выполнить исправление:</strong> в уже согласованных границах, с сохранением рабочей версии.</li><li><strong>Потребовать проверку:</strong> открыть результат и показать, что теперь работает.</li></ol><pre id="trouble-prompt"></pre><button id="copy-trouble" class="primary">Скопировать запрос на исправление</button><p class="callout">Не застреваем на одном месте дольше 3 минут: показываем локальное превью, сохраняем ошибку и идём дальше. Рабочую версию не удаляем. Вход, код подтверждения, личные данные и новые расходы — решение человека.</p></dialog>
